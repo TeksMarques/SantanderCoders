@@ -1,0 +1,37 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+h1 {
+    color: #1d8675;
+/* como usar o decimal para selecionar uma cor:
+    uso # onde o primeiro par é o vermelho, o segundo o verde e o terceiro o azul
+    que varia de 0 a 255
+    e cada par pode ser representado por um número hexadecimal que vai de 0 a f
+    onde 0 é o menor valor e f é o maior valor
+*/
+    font-size: 80px;
+    font-weight: 900;
+    font-style: oblique;
+    text-decoration: underline;
+    text-transform: lowercase;
+    text-align: center;
+}
+
+p {
+    font-size: 20px;
+    text-align: justify;
+    text-indent: 90px;
+}
+
+.bg {
+    height: 500px;
+    width: 100%;
+    background-position: center;
+    background-color: #1d8675;
+    background-image: url('https://images.unsplash.com/photo-1682687220742-aba13b6e50ba?ixlib=rb-4.0.3&ixid=M3wxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
