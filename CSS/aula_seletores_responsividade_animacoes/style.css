@@ -1,0 +1,164 @@
+/* 
+os tipos de seletores são:
+- tipo: h1, p, div, body, etc
+- classe: .classe
+- id: #id
+- atributo: [type="text"]
+- pseudo-classe: :hover, :active, :focus, etc
+- pseudo-elemento: ::before, ::after, ::first-letter, etc
+
+*/
+
+/*
+como trazer responsividade para o site?
+
+utilizamos o: @media screen and, e apos isso, a largura e altura da tela que queremos que o css seja aplicado 
+exemplo: @media screen and (max-width: 768px) {
+    .container {
+        width: 100%;
+    }
+}
+
+após o @media podemos escolher onde queremos aplicar a responsividade, como exibição da tela, se para formatar para impressão, etc
+
+para desktop:
+@media screen and (min-width: 1024px) {
+    .container {
+        width: 960px;
+    }
+}
+
+para tablet:
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+    .container {
+        width: 768px;
+    }
+}
+
+para celular:
+@media screen and (max-width: 767px) {
+    .container {
+        width: 100%;
+    }
+}
+
+para impressão:
+@media print {
+    .container {
+        width: 100%;
+    }
+}
+
+*/
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.bg {
+    height: 20vh;
+    width: 100%;
+    background-position: center;    
+    background-image: url('https://plus.unsplash.com/premium_photo-1683309561716-a6bf0ab6e34a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80');
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+h1 {
+    color:blueviolet;
+    font-size: 3.2rem;
+    margin-bottom: 2rem;
+    margin-top: 2rem;
+    text-align: center;
+}
+
+button {
+    background-color: steelblue;
+    color: white;
+    border: none;
+    font-size: 2.8rem;
+    padding: 0.6rem 2.4rem;
+    text-decoration: none;
+    transition: .2s ease-in-out, background-color 1s ease-in-out;
+    cursor: pointer;
+    margin: auto;
+    width: 80%;
+    text-align: center;
+    display: block;
+
+    /* 
+    opacity: 0; - o button some, mas ainda é permitido clicar nele, mas continua com o espaço na tela
+    visibility: hidden; - o button some, e não é permitido clicar nele, mas continua com o espaço na tela
+    display: none; - o button some, e não é permitido clicar nele e não continua com o espaço na tela
+    */   
+}
+
+[data-button="team"] {  
+    margin-top: 2rem;
+    animation: pulse 1.5s infinite;
+    animation-direction: alternate;
+    transform: scale(1);
+
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+       
+    }
+
+    100% {
+        transform: scale(1.35);
+        
+    }
+}
+
+[data-button="products"]:hover {
+   transform: scale(1.2);
+   background-color: aqua;
+   color: black;
+}
+
+.spinner-container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.fa-spinner {
+    margin-top: 3rem;
+    margin: 4rem;
+    font-size: 5rem;
+    color: blueviolet;
+    animation: load 1s infinite;
+}
+
+@keyframes load {
+    0% {
+        transform: rotateZ(0deg);
+    }
+    100% {
+        transform: rotateZ(360deg)
+    }
+}
+
+
+@media screen and (min-width: 1000px) {
+    .bg {
+        height: 40vh;
+    }
+}
+
+@media screen and (min-width: 768px) and (max-width: 999px) {
+    .bg {
+        height: 60vh;
+    }
+}
+
+@media screen and (max-width: 767px) {
+    h1 {
+        color: red
+    }
+}
