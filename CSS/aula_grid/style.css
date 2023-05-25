@@ -66,6 +66,7 @@ p {
     gap: 2rem 5rem;
 
     grid-template-columns: 3fr repeat(2, 1fr);
+    /* apesar de existir o template columns e roqs, é melhor utilizar o areas para uma melhor organização do código e no futuro ser mais fácil de fazer alterações no codigo. */
    
 }
 
