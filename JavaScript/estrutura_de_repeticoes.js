@@ -1,16 +1,17 @@
 // Laços de repetição
 
-const input = require('readline-sync');
+const readlineSync = require('readline-sync');
 
 const numeroSorteado = 5;
 
-let numero = Number(input.question('Digite um numero: '));
+let numero = Number(readlineSync.question('Digite um numero: '));
 
 while (numero !== numeroSorteado) {
     console.log('Você errou o número, Tente novamente');
-    numero = Number(input.question('Digite um numero: '));
+    numero = Number(readlineSync.question('Digite um numero: '));
 }
 
 console.log('Você acertou o número!');
 
-// testar quando estiver usando o linux, agora dia 27/05/23 o node crashou no windows
+
+// Meu node não havia crashado, mas utilizando apenas o code runner não funcionava, apois pesquisas descobri que para funcionar o readline-sync precisava utilizar o terminal e primeiro chamar o node e logo depois o arquivo que queria executar, no caso o estrutura_de_repeticoes.js //
